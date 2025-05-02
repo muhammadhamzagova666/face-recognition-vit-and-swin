@@ -113,6 +113,9 @@ python vit-lfw.py \
   --learning-rate 1e-4
 ```
 
+## Evaluation
+1. [Swin notebook with evaluation matrices](https://www.kaggle.com/code/k214871emmanuel/swin-lfw-with-testing/notebook?scriptVersionId=237403551)
+
 ## Results
 
 | Model         | Val Accuracy (%) | Train Accuracy (%) | Loss |
