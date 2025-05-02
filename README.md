@@ -2,7 +2,6 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/muhammadhamzagova666/face-recognition-vit-and-swin/ci.yml?branch=main)](https://github.com/muhammadhamzagova666/face-recognition-vit-and-swin/actions)
 
 ## Description
 
@@ -39,12 +38,7 @@ Our goal is to demonstrate the superior representational power of Swin over vani
 ## Dataset
 
 We use the Labelled Faces in the Wild (LFW) dataset, available on Kaggle:
-
-```
-
-[https://www.kaggle.com/datasets/jessicali9530/lfw-dataset](https://www.kaggle.com/datasets/jessicali9530/lfw-dataset)
-
-```
+[Labelled Faces in the Wild (LFW) Dataset](https://www.kaggle.com/datasets/jessicali9530/lfw-dataset)
 
 Download and unpack into:
 ```
@@ -64,7 +58,7 @@ data/lfw-deepfunneled/
    ```bash
    git clone https://github.com/muhammadhamzagova666/face-recognition-vit-and-swin.git
    cd face-recognition-vit-and-swin
-````
+   ```
 
 2. **Create & activate a virtual environment**
 
