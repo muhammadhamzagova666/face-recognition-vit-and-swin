@@ -115,6 +115,10 @@ python vit-lfw.py \
 
 ## Results
 
+The trained models can be found on this link:
+
+[Face Recognition Trained Models using ViT and Swin Transformers on LFW Dataset](https://drive.google.com/drive/folders/1hbdr1LVDz2pHtKFv55q0Lo3KviPJVt1t?usp=drive_link)
+
 | Model         | Val Accuracy (%) | Train Accuracy (%) | Loss |
 | ------------- | ---------------- | ------------------ | ---- |
 | Swin          | 91.4             | 98.2               | 1.19 |
@@ -165,8 +169,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 For questions or feedback, please open an issue or contact:
 
-* **Maintainer**:
+* **Maintainers**:
   - [Muhammad Hamza](https://github.com/muhammadhamzagova666/)
   - [Emmanuel](https://github.com/emmanuelmoon/)
   - [Jatin Kesnani](https://github.com/Jatin-Kesnani/)
+
 * **Project URL**: [Face Recognition using ViT and Swin Transformers](https://github.com/muhammadhamzagova666/face-recognition-vit-and-swin/)
