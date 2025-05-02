@@ -38,6 +38,7 @@ Our goal is to demonstrate the superior representational power of Swin over vani
 ## Dataset
 
 We use the Labelled Faces in the Wild (LFW) dataset, available on Kaggle:
+
 [Labelled Faces in the Wild (LFW) Dataset](https://www.kaggle.com/datasets/jessicali9530/lfw-dataset)
 
 Download and unpack into:
