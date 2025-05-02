@@ -1,4 +1,4 @@
-# Facial Recognition
+# Face Recognition using ViT and Swin Transformers
 
 [![Python Version](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -169,4 +169,4 @@ For questions or feedback, please open an issue or contact:
   - [Muhammad Hamza](https://github.com/muhammadhamzagova666/)
   - [Emmanuel](https://github.com/emmanuelmoon/)
   - [Jatin Kesnani](https://github.com/Jatin-Kesnani/)
-* **Project URL**: [https://github.com/](https://github.com/)\muhammadhamzagova666/face-recognition-vit-and-swin
+* **Project URL**: [Face Recognition using ViT and Swin Transformers](https://github.com/muhammadhamzagova666/face-recognition-vit-and-swin/)
