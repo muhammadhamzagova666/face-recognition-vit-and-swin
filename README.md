@@ -115,14 +115,14 @@ python vit-lfw.py \
 
 ## Results
 
-The trained models can be found on this link:
-
-[Face Recognition Trained Models using ViT and Swin Transformers on LFW Dataset](https://drive.google.com/drive/folders/1hbdr1LVDz2pHtKFv55q0Lo3KviPJVt1t?usp=drive_link)
-
 | Model         | Val Accuracy (%) | Train Accuracy (%) | Loss |
 | ------------- | ---------------- | ------------------ | ---- |
 | Swin          | 91.4             | 98.2               | 1.19 |
 | ViT (scratch) | 81.1             | 93.4               | 1.49 |
+
+The trained models can be found on this link:
+
+[Face Recognition Trained Models using ViT and Swin Transformers on LFW Dataset](https://drive.google.com/drive/folders/1hbdr1LVDz2pHtKFv55q0Lo3KviPJVt1t?usp=drive_link)
 
 *Key takeaway:* Swin Transformer outperforms ViT by a substantial margin in both recognition accuracy and ROC AUC, while also delivering faster inference due to its hierarchical design.
 
