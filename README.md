@@ -114,7 +114,7 @@ python vit-lfw.py \
 ```
 
 ## Evaluation
-1. [Swin notebook with evaluation matrices](https://www.kaggle.com/code/k214871emmanuel/swin-lfw-with-testing/notebook?scriptVersionId=237403551)
+1. [Swin Evaluation Metrics](https://www.kaggle.com/code/k214871emmanuel/swin-lfw-with-testing/notebook?scriptVersionId=237403551)
 
 ## Results
 
