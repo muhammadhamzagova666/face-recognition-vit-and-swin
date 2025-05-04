@@ -113,7 +113,8 @@ python vit-lfw.py \
   --learning-rate 1e-4
 ```
 
-## Evaluation
+### Evaluation
+
 1. [Swin Evaluation Metrics](https://www.kaggle.com/code/k214871emmanuel/swin-lfw-with-testing)
 2. [ViT Evaluation Metrics](https://www.kaggle.com/code/jatinkesnani2003/vit-lfw-dlp-final-project)
 
