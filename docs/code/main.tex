@@ -41,13 +41,13 @@
     tabsize=2
 }
 \lstset{style=mystyle}
-
+\setlength{\columnsep}{25pt}
 \begin{document}
 
 \begin{titlepage}
     \centering
     
-    {\scshape\LARGE \textbf{Foundation for Advancement of Science \& Technology} \par}
+    % {\scshape\LARGE \textbf{Foundation for Advancement of Science \& Technology} \par}
 
     {\scshape\Huge \textbf{National University of Computer \& Emerging Sciences} \par}
     \vspace{10pt}
@@ -55,7 +55,7 @@
     \includegraphics[width=0.45\textwidth]{FAST-NUCES-Logo.png}\par
     \vspace{10pt}
     
-    {\scshape\Huge \textbf{FACIAL RECOGNITION} \par}
+    {\scshape\Huge \textbf{FACE RECOGNITION} \par}
     
     {\scshape\LARGE \textbf{Swin \& Vision Transformers on LFW Dataset} \par}
     \vspace{10pt}
@@ -68,11 +68,11 @@
         \noindent\textbf{Project Team:}
         \vspace{10pt}
         \begin{itemize}
-            \item \href{https://github.com/muhammadhamzagova666/}{Muhammad Hamza}
+            \item \href{https://github.com/muhammadhamzagova666/}{K21-4579 - Muhammad Hamza}
             \vspace{10pt}
-            \item \href{https://github.com/emmanuelmoon/}{Emmanuel}
+            \item \href{https://github.com/emmanuelmoon/}{K21-4871 - Emmanuel}
             \vspace{10pt}
-            \item \href{https://github.com/Jatin-Kesnani/}{Jatin Kesnani}
+            \item \href{https://github.com/Jatin-Kesnani/}{K21-3204 - Jatin Kesnani}
         \end{itemize}
         \vspace{10pt}
 
@@ -101,22 +101,27 @@
     \end{flushleft}
 \end{titlepage}
 
-\title{Facial Recognition Using Swin and Vision Transformers on LFW}
+\title{Face Recognition Using Swin and Vision Transformers on LFW}
 \maketitle
 
-\begin{abstract}
-This report presents a comprehensive study on facial recognition employing two state-of-the-art transformer architectures: the Vision Transformer (ViT)~\cite{dosovitskiy2020image} and the Swin Transformer~\cite{liu2021swin}. Both models are trained and evaluated on the Labeled Faces in the Wild (LFW) dataset~\cite{huang2008lfw}. We detail data preprocessing, model architectures, training protocols, and comparative results in terms of accuracy, ROC AUC, and computational efficiency. Extensive code listings and clear citations throughout provide reproducibility and rigor.
-\end{abstract}
+\section*{Abstract}
+\noindent
+This report presents a comprehensive study on face recognition employing two state-of-the-art transformer architectures: the Vision Transformer (ViT)~\cite{dosovitskiy2020image} and the Swin Transformer~\cite{liu2021swin}. Both models are trained and evaluated on the Labeled Faces in the Wild (LFW) dataset~\cite{huang2008lfw}. We detail data preprocessing, model architectures, training protocols, and comparative results in terms of accuracy, ROC AUC, and computational efficiency. Extensive code listings and clear citations throughout provide reproducibility and rigor.
 
+\vspace{1em}
+
+\noindent
 \begin{IEEEkeywords}
-Facial Recognition, Vision Transformer, Swin Transformer, LFW Dataset, Deep Learning
+Face Recognition, Vision Transformer, Swin Transformer, LFW Dataset, Deep Learning
 \end{IEEEkeywords}
 
 \section{Introduction}
-Facial recognition has become pivotal in security, authentication, and human–computer interaction~\cite{jain2004introduction}. Convolutional neural networks (CNNs) traditionally dominated this field, but transformer-based approaches have shown promising results by modeling global dependencies within images~\cite{dosovitskiy2020image}. This work investigates and compares ViT and Swin Transformer architectures on the challenging LFW dataset~\cite{huang2008lfw}, which contains over 13,000 images of faces in the wild.
+\setlength{\parindent}{4em}
+Face recognition has become pivotal in security, authentication, and human–computer interaction. Convolutional neural networks (CNNs) traditionally dominated this field, but transformer-based approaches have shown promising results by modeling global dependencies within images~\cite{dosovitskiy2020image}. This work investigates and compares ViT and Swin Transformer architectures on the challenging LFW dataset~\cite{huang2008lfw}, which contains over 13,000 images of faces in the wild.
 
 \section{Related Work}
 \subsection{LFW Dataset}
+\setlength{\parindent}{4em}
 The LFW dataset~\cite{huang2008lfw} is a benchmark for unconstrained face recognition, featuring real-world variations in pose, lighting, and occlusion. It has been extensively used to evaluate advances in face verification algorithms~\cite{learned2016lfwweb}.
 
 \subsection{Vision Transformer}
@@ -145,16 +150,15 @@ loader_train = torch.utils.data.DataLoader(dataset_train, batch_size=64, shuffle
 \end{lstlisting}
 
 \subsection{Model Architectures}
-\subsubsection{Vision Transformer}
-We use the Hugging Face implementation of ViT-Base~\cite{huggingface_vit}, fine-tuned for 50 epochs.
+\setlength{\parindent}{0pt}
+\subsubsection{Vision Transformer:We use the Hugging Face implementation of ViT-Base~\cite{huggingface_vit}, fine-tuned for 50 epochs.}
 \begin{lstlisting}[language=Python, caption=ViT Model Initialization]
 from transformers import ViTForImageClassification, ViTConfig
 config = ViTConfig.from_pretrained('google/vit-base-patch16-224')
 model_vit = ViTForImageClassification.from_pretrained('google/vit-base-patch16-224', config=config)
 \end{lstlisting}
 
-\subsubsection{Swin Transformer}
-We employ the Swin-B variant via Hugging Face~\cite{huggingface_swin}, fine-tuned for 30 epochs.
+\subsubsection{Swin Transformer: We employ the Swin-B variant via Hugging Face~\cite{huggingface_swin}, fine-tuned for 30 epochs.}
 \begin{lstlisting}[language=Python, caption=Swin Transformer Initialization]
 from transformers import SwinForImageClassification, SwinConfig
 config = SwinConfig.from_pretrained('microsoft/swin-base-patch4-window7-224')
@@ -162,6 +166,7 @@ model_swin = SwinForImageClassification.from_pretrained('microsoft/swin-base-pat
 \end{lstlisting}
 
 \subsection{Training Loop}
+\setlength{\parindent}{4em}
 Both models trained with AdamW optimizer~\cite{loshchilov2019decoupled} and cosine learning rate schedule.
 \begin{lstlisting}[language=Python, caption=Training Loop Snippet]
 from torch.optim import AdamW
@@ -184,6 +189,7 @@ for epoch in range(epochs):
 All experiments conducted on a single NVIDIA RTX 3090 Ti GPU, using PyTorch 1.13 and Transformers 4.28. Metrics include top-1 accuracy and ROC AUC via scikit-learn~\cite{pedregosa2011scikit}.
 
 \section{Results and Discussion}
+\setlength{\parindent}{0pt}
 Table~\ref{tab:results} compares performance.
 \begin{table}[H]
 \centering
@@ -201,10 +207,20 @@ Swin-B       & 99.2          & 0.998  & 12                  \\
 Swin Transformer outperforms ViT in accuracy and AUC, and is ~33\% faster during inference due to hierarchical windowing.
 
 \section{Conclusion}
-This study demonstrates that the Swin Transformer significantly surpasses ViT on the LFW benchmark, offering both higher accuracy and efficiency. Future work includes exploring larger transformer variants and domain adaptation techniques.
+\setlength{\parindent}{4em}
+This study evaluated the performance of Vision Transformer (ViT) and Swin Transformer models for face recognition using the Labeled Faces in the Wild (LFW) dataset. By fine-tuning pretrained versions of both models, we observed that the Swin Transformer significantly outperformed ViT in terms of accuracy (99.2\% vs. 95.8\%), ROC AUC (0.998 vs. 0.971), and inference time (12ms vs. 18ms). These results highlight the effectiveness of Swin’s hierarchical architecture and localized self-attention mechanism, which allow for better feature extraction and generalization, especially on relatively small datasets like LFW.
+
+In contrast, ViT’s patch-based self-attention, while powerful, was less effective without large-scale training data. Our findings suggest that Swin Transformer is a more practical and accurate choice for face recognition in real-world settings. Future work can expand on this by incorporating more transformer variants, applying domain-specific pretraining, or optimizing models for edge deployment. Overall, the Swin Transformer stands out as a robust solution for accurate and efficient face recognition tasks.
+
+
 
 \section*{Acknowledgment}
-We thank the FAST computing cluster support team.
+\setlength{\parindent}{0pt}
+We would like to express our sincere gratitude to our instructor, Ms. Sumaiyah Zahid, for their continuous support, valuable guidance, and insightful feedback throughout this project. Their encouragement and mentorship played a pivotal role in the successful completion of our work.
+
+We also acknowledge the contributions of the open-source community and researchers whose tools and datasets, particularly the Labeled Faces in the Wild (LFW) dataset, were instrumental in our experimentation.
+
+Finally, we are thankful to the FAST computing cluster support team.
 
 \bibliographystyle{IEEEtran}
 \begin{thebibliography}{10}
