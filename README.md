@@ -115,7 +115,7 @@ python vit-lfw.py \
 
 ## Evaluation
 1. [Swin Evaluation Metrics](https://www.kaggle.com/code/k214871emmanuel/swin-lfw-with-testing)
-2. [ViT Evaluation Metrics](https://www.kaggle.com/code/jatinkesnani2003/vit-lfw-dlp-project)
+2. [ViT Evaluation Metrics](https://www.kaggle.com/code/jatinkesnani2003/vit-lfw-dlp-final-project)
 
 ## Results
 
