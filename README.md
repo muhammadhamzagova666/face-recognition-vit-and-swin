@@ -120,10 +120,10 @@ python vit-lfw.py \
 
 ## Results
 
-| Model         | Val Accuracy (%) | Train Accuracy (%) | Loss |
-| ------------- | ---------------- | ------------------ | ---- |
-| Swin          | 91.4             | 98.2               | 1.19 |
-| ViT (scratch) | 81.1             | 93.4               | 1.49 |
+| Model         | Test Accuracy (%) | Loss   |
+| ------------- | ----------------- | ------ |
+| Swin          | 85.12             | 1.4142 |
+| ViT (scratch) | 96.66             | 0.2387 |
 
 The trained models can be found on this link:
 
